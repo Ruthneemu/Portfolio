@@ -1,17 +1,90 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the dynamic background shape */
+        .bg-shape {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px; /* Adjust size as needed */
+            height: 500px; /* Adjust size as needed */
+            background: linear-gradient(135deg, #a855f7, #db2777); /* Purple to Pink gradient */
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; /* Organic shape */
+            filter: blur(80px); /* Soft blur effect */
+            opacity: 0.6; /* Slightly transparent */
+            z-index: -1; /* Behind the image */
+        }
 
-            </nav>
-        </header>
-    </body>
+        /* Ensure Inter font is used */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+
+    <!-- Navigation Bar -->
+    <header class="bg-gray-800 p-4 shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="text-3xl font-bold text-purple-500">RS</div>
+            <ul class="flex space-x-6 md:space-x-10">
+                <li><a href="#" class="text-gray-300 hover:text-purple-400 transition duration-300 rounded-md p-2">About Me.</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-purple-400 transition duration-300 rounded-md p-2">Services.</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-purple-400 transition duration-300 rounded-md p-2">Portfolio.</a></li>
+                <li><a href="#" class="text-purple-400 hover:text-purple-300 font-semibold transition duration-300 rounded-md p-2">Hire Me.</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex-grow container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center justify-center relative overflow-hidden">
+        <!-- Background shape for the image -->
+        <div class="bg-shape"></div>
+
+        <!-- Left Content Area -->
+        <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0 z-10">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+                I AM A PROFESSIONAL <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">GRAPHIC DESIGNER</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-xl mx-auto md:mx-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus nisl nunc, at congue massa elementum non. Vestibulum pretium ipsum sed nisl rutrum bibendum. Integer vitae volutpat arcu.
+            </p>
+            <button class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Hire Me
+            </button>
+        </div>
+
+        <!-- Right Image Area -->
+        <div class="md:w-1/2 flex justify-center items-center relative z-10">
+            <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl">
+                <!-- Profile Picture - Replace with your image URL -->
+                <img src="https://placehold.co/400x400/333333/FFFFFF?text=PROFILE" alt="Profile Picture" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </main>
+
+    <!-- Contact Section Placeholder -->
+    <section class="bg-gray-800 p-8 text-center shadow-inner mt-auto">
+        <h2 class="text-3xl font-bold mb-4">CONTACT ME</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus nisl nunc, at congue massa elementum non. Vestibulum pretium ipsum sed nisl rutrum bibendum.
+        </p>
+    </section>
+
+    <script>
+        // Basic JavaScript for potential future interactivity
+        // For example, you could add scroll animations, form validation, etc.
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Portfolio template loaded!');
+        });
+    </script>
+</body>
 </html>
