@@ -26,64 +26,229 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+
+        /* Styles for active navigation link */
+        .nav-link.active {
+            color: #a78bfa; /* Tailwind purple-400 */
+            font-weight: 600;
+        }
+
+        /* Styles for content sections */
+        .content-section {
+            display: none; /* Hidden by default */
+        }
+
+        .content-section.active {
+            display: block; /* Shown when active */
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white min-h-screen flex flex-col">
 
     <!-- Navigation Bar -->
-    <header class="bg-gray-800 p-4 shadow-lg">
-        <nav class="container mx-auto flex justify-between items-center">
-            <div class="text-3xl font-bold text-purple-500">RS</div>
-            <ul class="flex space-x-6 md:space-x-10">
-                <li><a href="#" class="text-gray-300 hover:text-purple-400 transition duration-300 rounded-md p-2">About Me.</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-purple-400 transition duration-300 rounded-md p-2">Services.</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-purple-400 transition duration-300 rounded-md p-2">Portfolio.</a></li>
-                <li><a href="#" class="text-purple-400 hover:text-purple-300 font-semibold transition duration-300 rounded-md p-2">Hire Me.</a></li>
+    <header class="bg-gray-800 p-4 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center flex-wrap">
+            <div class="text-3xl font-bold text-purple-500 mb-2 md:mb-0">RS</div>
+            <ul class="flex space-x-4 md:space-x-10 flex-grow justify-end">
+                <li><a href="#about" class="nav-link text-gray-300 hover:text-purple-400 transition duration-300 rounded-md p-2 active">About Me.</a></li>
+                <li><a href="#services" class="nav-link text-gray-300 hover:text-purple-400 transition duration-300 rounded-md p-2">Services.</a></li>
+                <li><a href="#portfolio" class="nav-link text-gray-300 hover:text-purple-400 transition duration-300 rounded-md p-2">Portfolio.</a></li>
+                <li><a href="#contact" class="nav-link text-purple-400 hover:text-purple-300 font-semibold transition duration-300 rounded-md p-2">Hire Me.</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <main class="flex-grow container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center justify-center relative overflow-hidden">
-        <!-- Background shape for the image -->
-        <div class="bg-shape"></div>
+    <!-- Main Content Area - Contains all sections -->
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-16">
 
-        <!-- Left Content Area -->
-        <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0 z-10">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
-                I AM A PROFESSIONAL <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">GRAPHIC DESIGNER</span>
-            </h1>
-            <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-xl mx-auto md:mx-0">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus nisl nunc, at congue massa elementum non. Vestibulum pretium ipsum sed nisl rutrum bibendum. Integer vitae volutpat arcu.
-            </p>
-            <button class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                Hire Me
-            </button>
-        </div>
+        <!-- About Me Section (Initial View) -->
+        <section id="about" class="content-section active py-16 md:py-24 flex flex-col md:flex-row items-center justify-center relative overflow-hidden">
+            <!-- Background shape for the image -->
+            <div class="bg-shape"></div>
 
-        <!-- Right Image Area -->
-        <div class="md:w-1/2 flex justify-center items-center relative z-10">
-            <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl">
-                <!-- Profile Picture - Replace with your image URL -->
-                <img src="https://placehold.co/400x400/333333/FFFFFF?text=PROFILE" alt="Profile Picture" class="w-full h-full object-cover">
+            <!-- Left Content Area -->
+            <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0 z-10">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+                    I AM A PROFESSIONAL <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">GRAPHIC DESIGNER</span>
+                </h1>
+                <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-xl mx-auto md:mx-0">
+                    Hello! I'm a passionate graphic designer with a keen eye for detail and a love for creating visually stunning and impactful designs. With years of experience, I specialize in branding, web design, and print media. Let's create something amazing together!
+                </p>
+                <button class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105" onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });">
+                    Hire Me
+                </button>
             </div>
-        </div>
+
+            <!-- Right Image Area -->
+            <div class="md:w-1/2 flex justify-center items-center relative z-10">
+                <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl">
+                    <!-- Profile Picture - Using the uploaded PORTFOLIO.jpg -->
+                    <img src="PORTFOLIO.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="content-section py-16 md:py-24 text-center">
+            <h2 class="text-4xl font-bold mb-12">My Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-purple-400 text-5xl mb-4">🎨</div>
+                    <h3 class="text-2xl font-semibold mb-4">Brand Identity</h3>
+                    <p class="text-gray-300">Crafting unique and memorable brand identities that resonate with your audience, including logos, style guides, and brand collateral.</p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-pink-400 text-5xl mb-4">💻</div>
+                    <h3 class="text-2xl font-semibold mb-4">Web Design</h3>
+                    <p class="text-gray-300">Designing intuitive and visually appealing websites that offer an exceptional user experience across all devices.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-green-400 text-5xl mb-4">🖨️</div>
+                    <h3 class="text-2xl font-semibold mb-4">Print Media</h3>
+                    <p class="text-gray-300">Creating stunning print materials such as brochures, flyers, business cards, and posters that leave a lasting impression.</p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-blue-400 text-5xl mb-4">📱</div>
+                    <h3 class="text-2xl font-semibold mb-4">UI/UX Design</h3>
+                    <p class="text-gray-300">Focusing on user-centered design principles to create engaging and accessible interfaces for applications and digital products.</p>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-yellow-400 text-5xl mb-4">🖼️</div>
+                    <h3 class="text-2xl font-semibold mb-4">Illustration</h3>
+                    <p class="text-gray-300">Producing custom illustrations that add a unique visual flair and personality to your projects and content.</p>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-red-400 text-5xl mb-4">🎬</div>
+                    <h3 class="text-2xl font-semibold mb-4">Motion Graphics</h3>
+                    <p class="text-gray-300">Bringing designs to life with dynamic motion graphics for videos, presentations, and digital advertising.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="content-section py-16 md:py-24 text-center">
+            <h2 class="text-4xl font-bold mb-12">My Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/555555/FFFFFF?text=Project+1" alt="Portfolio Project 1" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Brand Redesign</h3>
+                        <p class="text-gray-300">A complete overhaul of a local startup's brand identity, including logo, color palette, and typography.</p>
+                        <a href="#" class="text-purple-400 hover:text-purple-300 mt-4 inline-block font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/666666/FFFFFF?text=Project+2" alt="Portfolio Project 2" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">E-commerce Website</h3>
+                        <p class="text-gray-300">Designed and developed a responsive e-commerce platform for a fashion boutique, focusing on user experience.</p>
+                        <a href="#" class="text-purple-400 hover:text-purple-300 mt-4 inline-block font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/777777/FFFFFF?text=Project+3" alt="Portfolio Project 3" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Mobile App UI</h3>
+                        <p class="text-gray-300">User interface design for a fitness tracking mobile application, emphasizing clean design and easy navigation.</p>
+                        <a href="#" class="text-purple-400 hover:text-purple-300 mt-4 inline-block font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+                <!-- Add more portfolio items as needed -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section py-16 md:py-24 text-center">
+            <h2 class="text-4xl font-bold mb-12">Get in Touch</h2>
+            <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+                Have a project in mind or just want to say hello? Feel free to reach out using the form below or connect with me on social media.
+            </p>
+            <div class="bg-gray-800 p-8 rounded-lg shadow-xl max-w-xl mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-left text-gray-300 text-sm font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600 placeholder-gray-400" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-left text-gray-300 text-sm font-bold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600 placeholder-gray-400" placeholder="your.email@example.com">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-left text-gray-300 text-sm font-bold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="6" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600 placeholder-gray-400" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Contact Section Placeholder -->
-    <section class="bg-gray-800 p-8 text-center shadow-inner mt-auto">
-        <h2 class="text-3xl font-bold mb-4">CONTACT ME</h2>
-        <p class="text-gray-400 max-w-2xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus nisl nunc, at congue massa elementum non. Vestibulum pretium ipsum sed nisl rutrum bibendum.
-        </p>
-    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 p-8 text-center shadow-inner mt-auto">
+        <p class="text-gray-400">&copy; 2025 RS. All rights reserved.</p>
+        <div class="flex justify-center space-x-4 mt-4">
+            <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-300">LinkedIn</a>
+            <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-300">Behance</a>
+            <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-300">Dribbble</a>
+        </div>
+    </footer>
 
     <script>
-        // Basic JavaScript for potential future interactivity
-        // For example, you could add scroll animations, form validation, etc.
         document.addEventListener('DOMContentLoaded', () => {
-            console.log('Portfolio template loaded!');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            // Function to show a specific section and update active nav link
+            const showSection = (targetId) => {
+                // Remove active class from all nav links and hide all sections
+                navLinks.forEach(link => link.classList.remove('active'));
+                contentSections.forEach(section => section.classList.remove('active'));
+
+                // Add active class to the clicked nav link
+                const activeLink = document.querySelector(`.nav-link[href="${targetId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+
+                // Show the target section
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                    // Scroll to the top of the section for better UX, especially on smaller screens
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            };
+
+            // Add click event listeners to navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent default anchor behavior
+                    const targetId = link.getAttribute('href');
+                    showSection(targetId);
+                });
+            });
+
+            // Handle initial load to show the correct section based on URL hash (if any)
+            const initialHash = window.location.hash;
+            if (initialHash && document.querySelector(initialHash)) {
+                showSection(initialHash);
+            } else {
+                // Default to showing the 'about' section if no hash or invalid hash
+                showSection('#about');
+            }
         });
     </script>
 </body>
