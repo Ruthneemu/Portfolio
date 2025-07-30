@@ -1,255 +1,153 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
+    <title>Ruth Njuguna's Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for the dynamic background shape */
-        .bg-shape {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 500px; /* Adjust size as needed */
-            height: 500px; /* Adjust size as needed */
-            background: linear-gradient(135deg, #a855f7, #db2777); /* Purple to Pink gradient */
-            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; /* Organic shape */
-            filter: blur(80px); /* Soft blur effect */
-            opacity: 0.6; /* Slightly transparent */
-            z-index: -1; /* Behind the image */
-        }
-
-        /* Ensure Inter font is used */
+        /* Custom styles for the Inter font and smooth scrolling */
         body {
             font-family: 'Inter', sans-serif;
-        }
-
-        /* Styles for active navigation link */
-        .nav-link.active {
-            color: #a78bfa; /* Tailwind purple-400 */
-            font-weight: 600;
-        }
-
-        /* Styles for content sections */
-        .content-section {
-            display: none; /* Hidden by default */
-        }
-
-        .content-section.active {
-            display: block; /* Shown when active */
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white min-h-screen flex flex-col">
-
-    <!-- Navigation Bar -->
-    <header class="bg-gray-800 p-4 shadow-lg sticky top-0 z-50">
-        <nav class="container mx-auto flex justify-between items-center flex-wrap">
-            <div class="text-3xl font-bold text-purple-500 mb-2 md:mb-0">RS</div>
-            <ul class="flex space-x-4 md:space-x-10 flex-grow justify-end">
-                <li><a href="#about" class="nav-link text-gray-300 hover:text-purple-400 transition duration-300 rounded-md p-2 active">About Me.</a></li>
-                <li><a href="#services" class="nav-link text-gray-300 hover:text-purple-400 transition duration-300 rounded-md p-2">Services.</a></li>
-                <li><a href="#portfolio" class="nav-link text-gray-300 hover:text-purple-400 transition duration-300 rounded-md p-2">Portfolio.</a></li>
-                <li><a href="#contact" class="nav-link text-purple-400 hover:text-purple-300 font-semibold transition duration-300 rounded-md p-2">Hire Me.</a></li>
+<body class="bg-teal-800 text-white leading-relaxed">
+    <!-- Header section -->
+    <header class="bg-teal-900 shadow-lg py-4 px-6 fixed w-full z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- Logo/Your Name -->
+            <a href="#" class="text-3xl font-extrabold text-yellow-400 hover:text-yellow-300 transition duration-300 ease-in-out rounded-lg p-2">Ruth Njuguna</a>
+            <!-- Navigation links -->
+            <ul class="flex space-x-8">
+                <li><a href="#about" class="text-lg font-medium text-gray-200 hover:text-yellow-400 transition duration-300 ease-in-out px-3 py-2 rounded-md">About</a></li>
+                <li><a href="#projects" class="text-lg font-medium text-gray-200 hover:text-yellow-400 transition duration-300 ease-in-out px-3 py-2 rounded-md">Projects</a></li>
+                <li><a href="#skills" class="text-lg font-medium text-gray-200 hover:text-yellow-400 transition duration-300 ease-in-out px-3 py-2 rounded-md">Skills</a></li>
+                <li><a href="#contact" class="text-lg font-medium text-gray-200 hover:text-yellow-400 transition duration-300 ease-in-out px-3 py-2 rounded-md">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content Area - Contains all sections -->
-    <main class="flex-grow container mx-auto px-4 py-8 md:py-16">
-
-        <!-- About Me Section (Initial View) -->
-        <section id="about" class="content-section active py-16 md:py-24 flex flex-col md:flex-row items-center justify-center relative overflow-hidden">
-            <!-- Background shape for the image -->
-            <div class="bg-shape"></div>
-
-            <!-- Left Content Area -->
-            <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0 z-10">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
-                    I AM A PROFESSIONAL <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">MERN SOFTWARE ENGINEER</span>
-                </h1>
-                <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-xl mx-auto md:mx-0">
-                    Hello! I'm a dedicated MERN Stack Software Engineer with a passion for building robust, scalable, and user-friendly web applications. I specialize in MongoDB, Express.js, React, and Node.js, and I'm always eager to take on new challenges and contribute to innovative projects.
-                </p>
-                <button class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105" onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });">
-                    Hire Me
-                </button>
+    <!-- Main section -->
+    <main>
+        <!-- Hero section -->
+        <section id="hero" class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-teal-700 to-teal-900 pt-24 pb-16 px-4">
+            <div class="container mx-auto">
+                <!-- Placeholder image for your photo -->
+                <img src="https://placehold.co/192x192/008080/FFFFFF?text=Ruth" alt="Ruth Njuguna" class="w-48 h-48 rounded-full object-cover mb-8 shadow-2xl border-4 border-yellow-400">
+                <h1 class="text-6xl font-extrabold mb-4 text-white">Hi, I'm <span class="text-yellow-400">Ruth Njuguna</span></h1>
+                <p class="text-2xl mb-10 text-gray-200">A passionate software engineer solving real-world problems.</p>
+                <a href="#projects" class="bg-yellow-400 text-teal-900 px-10 py-4 rounded-full text-xl font-bold hover:bg-yellow-500 transition duration-300 ease-in-out shadow-lg transform hover:scale-105">View My Work</a>
             </div>
+        </section>
 
-            <!-- Right Image Area -->
-            <div class="md:w-1/2 flex justify-center items-center relative z-10">
-                <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl">
-                    <!-- Profile Picture - Using the uploaded PORTFOLIO.jpg -->
-                    <img src="PORTFOLIO.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+        <!-- About Section -->
+        <section id="about" class="py-20 px-4 bg-teal-800">
+            <div class="container mx-auto">
+                <h2 class="text-5xl font-bold text-center mb-16 text-yellow-400">About Me</h2>
+                <div class="text-lg leading-relaxed space-y-6 max-w-3xl mx-auto text-gray-200">
+                    <p>Hello, I'm a dedicated software engineer with a strong foundation in full-stack development, proficient in both front-end and back-end technologies. I love bringing real-life ideas to life through code and solving complex problems with elegant solutions.</p>
+                    <p>My journey in Software Engineering began when I was a first-year student and built my first calculator using Python. Since then, I have been continuously learning and exploring new technologies and best practices.</p>
+                    <p>I am proficient in Python, databases, React, and React Native, and have experience working on my drug verification system and my butchery-POS system. I am always eager to collaborate on existing projects and contribute to innovative teams.</p>
+                    <p>When I am not coding, you can find me reading books and learning a new language.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="content-section py-16 md:py-24 text-center">
-            <h2 class="text-4xl font-bold mb-12">My Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service Card 1 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-purple-400 text-5xl mb-4">🌐</div>
-                    <h3 class="text-2xl font-semibold mb-4">Full-Stack Development</h3>
-                    <p class="text-gray-300">Building complete web applications from front-end to back-end using the MERN stack (MongoDB, Express.js, React, Node.js).</p>
-                </div>
-                <!-- Service Card 2 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-pink-400 text-5xl mb-4">⚛️</div>
-                    <h3 class="text-2xl font-semibold mb-4">React.js Development</h3>
-                    <p class="text-gray-300">Creating dynamic and responsive user interfaces with React.js, ensuring a smooth and engaging user experience.</p>
-                </div>
-                <!-- Service Card 3 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-green-400 text-5xl mb-4">⚙️</div>
-                    <h3 class="text-2xl font-semibold mb-4">Node.js & Express.js APIs</h3>
-                    <p class="text-gray-300">Developing robust and scalable RESTful APIs with Node.js and Express.js for seamless data communication.</p>
-                </div>
-                <!-- Service Card 4 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-400 text-5xl mb-4">💾</div>
-                    <h3 class="text-2xl font-semibold mb-4">MongoDB Database Design</h3>
-                    <p class="text-gray-300">Designing and implementing efficient NoSQL database solutions using MongoDB for flexible data storage.</p>
-                </div>
-                <!-- Service Card 5 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-yellow-400 text-5xl mb-4">🚀</div>
-                    <h3 class="text-2xl font-semibold mb-4">Deployment & Hosting</h3>
-                    <p class="text-gray-300">Assisting with the deployment and hosting of MERN stack applications to ensure they are live and accessible.</p>
-                </div>
-                <!-- Service Card 6 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-red-400 text-5xl mb-4">🐛</div>
-                    <h3 class="text-2xl font-semibold mb-4">Debugging & Optimization</h3>
-                    <p class="text-gray-300">Identifying and resolving issues, and optimizing applications for performance and scalability.</p>
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-4 bg-teal-900">
+            <div class="container mx-auto">
+                <h2 class="text-5xl font-bold text-center mb-16 text-yellow-400">My Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Project Card 1 -->
+                    <div class="bg-teal-800 rounded-xl shadow-2xl overflow-hidden p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out">
+                        <!-- Placeholder image for project 1 -->
+                        <img src="https://placehold.co/400x250/006666/FFFFFF?text=Project+1" alt="Mediverify System" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-yellow-400">
+                        <h3 class="text-3xl font-bold mb-3 text-white">Mediverify System</h3>
+                        <p class="text-gray-300 mb-6 flex-grow">A drug verification system designed to combat counterfeit medications. It ensures authenticity through a secure database, providing real-time verification for users. Technologies: [Python, Django, React, PostgreSQL].</p>
+                        <div class="flex space-x-4 mt-auto">
+                            <a href="#" target="_blank" class="bg-yellow-400 text-teal-900 px-6 py-3 rounded-full font-bold hover:bg-yellow-500 transition duration-300 shadow-md">Live Demo</a>
+                            <a href="#" target="_blank" class="bg-gray-700 text-white px-6 py-3 rounded-full font-bold hover:bg-gray-600 transition duration-300 shadow-md">GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-teal-800 rounded-xl shadow-2xl overflow-hidden p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out">
+                        <!-- Placeholder image for project 2 -->
+                        <img src="https://placehold.co/400x250/006666/FFFFFF?text=Project+2" alt="Butchery POS System" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-yellow-400">
+                        <h3 class="text-3xl font-bold mb-3 text-white">Butchery POS System</h3>
+                        <p class="text-gray-300 mb-6 flex-grow">A point-of-sale system tailored for butcheries, streamlining inventory management, sales tracking, and customer transactions. Enhances efficiency and reduces manual errors. Technologies: [Python, Flask, React Native, SQLite].</p>
+                        <div class="flex space-x-4 mt-auto">
+                            <a href="#" target="_blank" class="bg-yellow-400 text-teal-900 px-6 py-3 rounded-full font-bold hover:bg-yellow-500 transition duration-300 shadow-md">Live Demo</a>
+                            <a href="#" target="_blank" class="bg-gray-700 text-white px-6 py-3 rounded-full font-bold hover:bg-gray-600 transition duration-300 shadow-md">GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="bg-teal-800 rounded-xl shadow-2xl overflow-hidden p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out">
+                        <!-- Placeholder image for project 3 -->
+                        <img src="https://placehold.co/400x250/006666/FFFFFF?text=Project+3" alt="Portfolio Website" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-yellow-400">
+                        <h3 class="text-3xl font-bold mb-3 text-white">Portfolio Website</h3>
+                        <p class="text-gray-300 mb-6 flex-grow">A personal portfolio website showcasing projects, skills, and contact information. Designed with a clean, modern, and responsive user interface to highlight professional work. Technologies: [HTML, Tailwind CSS, JavaScript].</p>
+                        <div class="flex space-x-4 mt-auto">
+                            <a href="#" target="_blank" class="bg-yellow-400 text-teal-900 px-6 py-3 rounded-full font-bold hover:bg-yellow-500 transition duration-300 shadow-md">Live Demo</a>
+                            <a href="#" target="_blank" class="bg-gray-700 text-white px-6 py-3 rounded-full font-bold hover:bg-gray-600 transition duration-300 shadow-md">GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="content-section py-16 md:py-24 text-center">
-            <h2 class="text-4xl font-bold mb-12">My Portfolio</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Portfolio Item 1 -->
-                <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/555555/FFFFFF?text=MERN+E-commerce" alt="Portfolio Project 1" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">E-commerce Platform</h3>
-                        <p class="text-gray-300">A full-stack e-commerce application built with MERN, featuring user authentication, product management, and payment integration.</p>
-                        <a href="#" class="text-purple-400 hover:text-purple-300 mt-4 inline-block font-medium">View Project &rarr;</a>
-                    </div>
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-4 bg-teal-800">
+            <div class="container mx-auto">
+                <h2 class="text-5xl font-bold text-center mb-16 text-yellow-400">My Skills</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center max-w-4xl mx-auto">
+                    <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl font-medium text-white transform hover:scale-105 transition duration-300">HTML5</div>
+                    <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl font-medium text-white transform hover:scale-105 transition duration-300">CSS3</div>
+                    <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl font-medium text-white transform hover:scale-105 transition duration-300">JavaScript</div>
+                    <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl font-medium text-white transform hover:scale-105 transition duration-300">React JS</div>
+                    <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl font-medium text-white transform hover:scale-105 transition duration-300">Git & GitHub</div>
+                    <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl font-medium text-white transform hover:scale-105 transition duration-300">Node JS</div>
+                    <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl font-medium text-white transform hover:scale-105 transition duration-300">Python</div>
+                    <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl font-medium text-white transform hover:scale-105 transition duration-300">SQL</div>
+                    <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl font-medium text-white transform hover:scale-105 transition duration-300">React Native</div>
+                    <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl font-medium text-white transform hover:scale-105 transition duration-300">Tailwind CSS</div>
                 </div>
-                <!-- Portfolio Item 2 -->
-                <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/666666/FFFFFF?text=Social+Media+App" alt="Portfolio Project 2" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">Social Media Dashboard</h3>
-                        <p class="text-gray-300">A responsive social media dashboard allowing users to post, comment, and interact, leveraging real-time updates with WebSockets.</p>
-                        <a href="#" class="text-purple-400 hover:text-purple-300 mt-4 inline-block font-medium">View Project &rarr;</a>
-                    </div>
-                </div>
-                <!-- Portfolio Item 3 -->
-                <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/777777/FFFFFF?text=Task+Manager" alt="Portfolio Project 3" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">Task Management App</h3>
-                        <p class="text-gray-300">A collaborative task management application with drag-and-drop functionality and user-specific task lists.</p>
-                        <a href="#" class="text-purple-400 hover:text-purple-300 mt-4 inline-block font-medium">View Project &rarr;</a>
-                    </div>
-                </div>
-                <!-- Add more portfolio items as needed -->
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="content-section py-16 md:py-24 text-center">
-            <h2 class="text-4xl font-bold mb-12">Get in Touch</h2>
-            <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-                Have a project in mind or just want to say hello? Feel free to reach out using the form below or connect with me on social media.
-            </p>
-            <div class="bg-gray-800 p-8 rounded-lg shadow-xl max-w-xl mx-auto">
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-left text-gray-300 text-sm font-bold mb-2">Name</label>
-                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600 placeholder-gray-400" placeholder="Your Name">
+        <section id="contact" class="py-20 px-4 bg-teal-900">
+            <div class="container mx-auto text-center">
+                <h2 class="text-5xl font-bold mb-16 text-yellow-400">Contact Me</h2>
+                <p class="text-xl mb-10 text-gray-200">Have a question or want to work together? Get in touch!</p>
+                <form action="#" method="POST" class="max-w-xl mx-auto space-y-8 bg-teal-800 p-10 rounded-xl shadow-2xl">
+                    <div class="text-left">
+                        <label for="name" class="block text-lg font-medium mb-2 text-white">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full p-4 rounded-lg bg-teal-700 border border-teal-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-white placeholder-gray-400">
                     </div>
-                    <div>
-                        <label for="email" class="block text-left text-gray-300 text-sm font-bold mb-2">Email</label>
-                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600 placeholder-gray-400" placeholder="your.email@example.com">
+                    <div class="text-left">
+                        <label for="email" class="block text-lg font-medium mb-2 text-white">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full p-4 rounded-lg bg-teal-700 border border-teal-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-white placeholder-gray-400">
                     </div>
-                    <div>
-                        <label for="message" class="block text-left text-gray-300 text-sm font-bold mb-2">Message</label>
-                        <textarea id="message" name="message" rows="6" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600 placeholder-gray-400" placeholder="Your Message"></textarea>
+                    <div class="text-left">
+                        <label for="message" class="block text-lg font-medium mb-2 text-white">Message</label>
+                        <textarea id="message" name="message" rows="6" required class="w-full p-4 rounded-lg bg-teal-700 border border-teal-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-white placeholder-gray-400"></textarea>
                     </div>
-                    <button type="submit" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                        Send Message
-                    </button>
+                    <button type="submit" class="bg-yellow-400 text-teal-900 px-10 py-4 rounded-full text-xl font-bold hover:bg-yellow-500 transition duration-300 shadow-lg transform hover:scale-105">Send a Message</button>
                 </form>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 p-8 text-center shadow-inner mt-auto">
-        <p class="text-gray-400">&copy; 2025 RS. All rights reserved.</p>
-        <div class="flex justify-center space-x-4 mt-4">
-            <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-300">LinkedIn</a>
-            <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-300">Behance</a>
-            <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-300">Dribbble</a>
+    <footer class="bg-teal-900 py-8 text-center text-gray-400 text-sm">
+        <div class="container mx-auto">
+            <p>&copy; 2025 Ruth Njuguna. All rights reserved.</p>
+            <p>Designed with <span class="text-red-500">&hearts;</span> and Tailwind CSS.</p>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const contentSections = document.querySelectorAll('.content-section');
-
-            // Function to show a specific section and update active nav link
-            const showSection = (targetId) => {
-                // Remove active class from all nav links and hide all sections
-                navLinks.forEach(link => link.classList.remove('active'));
-                contentSections.forEach(section => section.classList.remove('active'));
-
-                // Add active class to the clicked nav link
-                const activeLink = document.querySelector(`.nav-link[href="${targetId}"]`);
-                if (activeLink) {
-                    activeLink.classList.add('active');
-                }
-
-                // Show the target section
-                const targetSection = document.querySelector(targetId);
-                if (targetSection) {
-                    targetSection.classList.add('active');
-                    // Scroll to the top of the section for better UX, especially on smaller screens
-                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            };
-
-            // Add click event listeners to navigation links
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault(); // Prevent default anchor behavior
-                    const targetId = link.getAttribute('href');
-                    showSection(targetId);
-                });
-            });
-
-            // Handle initial load to show the correct section based on URL hash (if any)
-            const initialHash = window.location.hash;
-            if (initialHash && document.querySelector(initialHash)) {
-                showSection(initialHash);
-            } else {
-                // Default to showing the 'about' section if no hash or invalid hash
-                showSection('#about');
-            }
-        });
-    </script>
 </body>
 </html>
