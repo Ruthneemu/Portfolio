@@ -1,164 +1,130 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ruth Njuguna's Portfolio</title>
-  <!-- Tailwind CSS CDN -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ruth Njuguna - Software Engineer specializing in React, Flutter, and mobile app development.">
+  <meta name="author" content="Ruth Njuguna">
+  <title>Ruth Njuguna | Software Engineer</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/a2d2d2d2d2.js" crossorigin="anonymous"></script>
+
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    html {
       scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #012a2e, #023c3f, #015758);
+      color: #ffffff;
     }
   </style>
 </head>
-<body class="bg-teal-800 text-white leading-relaxed">
+<body class="overflow-x-hidden">
 
-  <!-- Header -->
-  <header class="bg-teal-900 shadow-lg py-4 px-6 fixed w-full z-50">
-    <nav class="container mx-auto flex justify-between items-center">
-      <a href="#" class="text-3xl font-extrabold text-yellow-400 hover:text-yellow-300 transition">Ruth Njuguna</a>
-      <ul class="flex space-x-8">
-        <li><a href="#about" class="text-lg text-gray-200 hover:text-yellow-400 transition">About</a></li>
-        <li><a href="#projects" class="text-lg text-gray-200 hover:text-yellow-400 transition">Projects</a></li>
-        <li><a href="#skills" class="text-lg text-gray-200 hover:text-yellow-400 transition">Skills</a></li>
-        <li><a href="#contact" class="text-lg text-gray-200 hover:text-yellow-400 transition">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Navbar -->
+  <header class="fixed w-full bg-teal-900/90 backdrop-blur-sm shadow-md z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-yellow-400">Ruth Njuguna</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-yellow-400">About</a>
+        <a href="#projects" class="hover:text-yellow-400">Projects</a>
+        <a href="#contact" class="hover:text-yellow-400">Contact</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden text-yellow-400 text-2xl">☰</button>
+    </div>
+    <ul id="mobile-menu" class="hidden flex-col items-center bg-teal-800 md:hidden space-y-4 py-4">
+      <li><a href="#about" class="hover:text-yellow-400">About</a></li>
+      <li><a href="#projects" class="hover:text-yellow-400">Projects</a></li>
+      <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+    </ul>
   </header>
 
-  <!-- Hero -->
-  <section id="hero" class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-teal-700 to-teal-900 pt-24 pb-16 px-4">
-    <div class="container mx-auto">
-      <img src="ruth.jpg" alt="Ruth Njuguna" class="w-48 h-48 rounded-full object-cover mb-8 shadow-2xl border-4 border-yellow-400">
-      <h1 class="text-6xl font-extrabold mb-4">Hi, I'm <span class="text-yellow-400">Ruth Njuguna</span></h1>
-      <p class="text-2xl mb-10 text-gray-200">A passionate software engineer solving real-world problems.</p>
-      <a href="#projects" class="bg-yellow-400 text-teal-900 px-10 py-4 rounded-full text-xl font-bold hover:bg-yellow-500 transition transform hover:scale-105">View My Work</a>
-      <div class="mt-8 flex justify-center space-x-6 text-3xl">
-        <a href="https://github.com/Ruthneemu" target="_blank" class="hover:text-yellow-400"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/ruth-njuguna" target="_blank" class="hover:text-yellow-400"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:ruthnjuguna@example.com" class="hover:text-yellow-400"><i class="fas fa-envelope"></i></a>
-      </div>
+  <script>
+    document.getElementById('menu-toggle').onclick = () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    };
+  </script>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center" data-aos="fade-up">
+    <h2 class="text-5xl font-bold text-yellow-400 mb-4">Hi, I'm Ruth Njuguna</h2>
+    <p class="text-lg max-w-2xl text-gray-200">
+      A passionate <span class="text-yellow-400">Software Engineer</span> focused on building smart, efficient, and user-friendly digital solutions using React, Flutter, and other modern technologies.
+    </p>
+    <div class="mt-8 flex gap-6">
+      <a href="#projects" class="bg-yellow-400 text-teal-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition">View My Work</a>
+      <a href="Ruth_Njuguna_Resume.pdf" download class="border-2 border-yellow-400 text-yellow-400 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 hover:text-teal-900 transition">Download Resume</a>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="py-20 px-4 bg-teal-800">
-    <div class="container mx-auto">
-      <h2 class="text-5xl font-bold text-center mb-16 text-yellow-400">About Me</h2>
-      <div class="text-lg leading-relaxed space-y-6 max-w-3xl mx-auto text-gray-200">
-        <p>Hello, I'm a dedicated software engineer with a strong foundation in full-stack development. I love bringing real-life ideas to life through code and solving complex problems with elegant solutions.</p>
-        <p>My journey began when I built my first calculator using Python. Since then, I’ve continued learning and exploring technologies like React, Python, and databases.</p>
-        <p>I’ve worked on systems such as a drug verification system and a butchery POS system. I’m always eager to collaborate on innovative projects.</p>
-        <p>When I’m not coding, you’ll find me reading books or learning new languages.</p>
-      </div>
-    </div>
+  <section id="about" class="py-20 px-6 md:px-20" data-aos="fade-up">
+    <h3 class="text-4xl font-bold mb-6 text-center text-yellow-400">About Me</h3>
+    <p class="max-w-4xl mx-auto text-center text-gray-200 leading-relaxed">
+      I’m a Software Engineer with a focus on mobile and web application development.
+      I love turning ideas into functional, aesthetic, and impactful solutions.
+      I specialize in Flutter, React, Supabase, and Firebase — building real-time systems that solve real-world challenges.
+    </p>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="py-20 px-4 bg-teal-900">
-    <div class="container mx-auto">
-      <h2 class="text-5xl font-bold text-center mb-16 text-yellow-400">My Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-        <!-- Project 1 -->
-        <div class="bg-teal-800 rounded-xl shadow-2xl overflow-hidden p-8 flex flex-col text-center transform hover:scale-105 transition">
-          <img src="mediverify.JPG" alt="Mediverify" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-yellow-400">
-          <h3 class="text-3xl font-bold mb-3">Mediverify System</h3>
-          <p class="text-gray-300 mb-6">A drug verification system that combats counterfeit medications using real-time verification. [Python, Django, React, PostgreSQL]</p>
-          <div class="flex justify-center space-x-4 mt-auto">
-            <a href="https://07ecd53a-4463-400d-a252-37769a5e9e7f-00-1fva6us9oqckd.spock.replit.dev:3000/" target="_blank" class="bg-yellow-400 text-teal-900 px-6 py-3 rounded-full font-bold hover:bg-yellow-500 transition">Live Demo</a>
-            <a href="https://github.com/Ruthneemu/MediVerify.git" target="_blank" class="bg-gray-700 px-6 py-3 rounded-full font-bold hover:bg-gray-600 transition"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="bg-teal-800 rounded-xl shadow-2xl overflow-hidden p-8 flex flex-col text-center transform hover:scale-105 transition">
-          <img src="butchery-pos.JPG" alt="Butchery POS" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-yellow-400">
-          <h3 class="text-3xl font-bold mb-3">Butchery POS System</h3>
-          <p class="text-gray-300 mb-6">A POS system for butcheries that manages inventory, sales, and customers efficiently. [Python, Flask, React Native, SQLite]</p>
-          <div class="flex justify-center space-x-4 mt-auto">
-            <a href="https://butchery-pos.netlify.app/login" target="_blank" class="bg-yellow-400 text-teal-900 px-6 py-3 rounded-full font-bold hover:bg-yellow-500 transition">Live Demo</a>
-            <a href="https://github.com/Ruthneemu/Butchery-POS.git" target="_blank" class="bg-gray-700 px-6 py-3 rounded-full font-bold hover:bg-gray-600 transition"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="bg-teal-800 rounded-xl shadow-2xl overflow-hidden p-8 flex flex-col text-center transform hover:scale-105 transition">
-          <img src="https://placehold.co/400x250/006666/FFFFFF?text=Project+3" alt="Blockchain" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-yellow-400">
-          <h3 class="text-3xl font-bold mb-3">Blockchain Certificate Verification System</h3>
-          <p class="text-gray-300 mb-6">A blockchain-based system for secure academic certificate verification. [Solidity, React, Node.js]</p>
-          <div class="flex justify-center space-x-4 mt-auto">
-            <a href="#" target="_blank" class="bg-yellow-400 text-teal-900 px-6 py-3 rounded-full font-bold hover:bg-yellow-500 transition">Live Demo</a>
-            <a href="#" target="_blank" class="bg-gray-700 px-6 py-3 rounded-full font-bold hover:bg-gray-600 transition"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="bg-teal-800 rounded-xl shadow-2xl overflow-hidden p-8 flex flex-col text-center transform hover:scale-105 transition">
-          <img src="symme.JPG" alt="Symme App" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-yellow-400">
-          <h3 class="text-3xl font-bold mb-3">Symme Chat App</h3>
-          <p class="text-gray-300 mb-6">A privacy-focused messaging app with end-to-end encryption built using Flutter.</p>
-          <div class="flex justify-center mt-auto">
-            <a href="https://github.com/Ruthneemu/symme.git" target="_blank" class="bg-gray-700 px-6 py-3 rounded-full font-bold hover:bg-gray-600 transition"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="bg-teal-800 rounded-xl shadow-2xl overflow-hidden p-8 flex flex-col text-center transform hover:scale-105 transition">
-          <img src="Music.JPG" alt="Music App" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-yellow-400">
-          <h3 class="text-3xl font-bold mb-3">Music App</h3>
-          <p class="text-gray-300 mb-6">A Flutter-based music player that allows users to play audio files stored locally on their device.</p>
-          <div class="flex justify-center mt-auto">
-            <a href="https://github.com/Ruthneemu/music_app.git" target="_blank" class="bg-gray-700 px-6 py-3 rounded-full font-bold hover:bg-gray-600 transition"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
+  <section id="projects" class="py-20 px-6 md:px-20 bg-teal-800/40" data-aos="fade-up">
+    <h3 class="text-4xl font-bold mb-10 text-center text-yellow-400">Projects</h3>
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <!-- Project 1 -->
+      <div class="bg-teal-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition transform">
+        <img src="mediverify.JPG" alt="Mediverify" class="rounded-xl mb-4 w-full h-48 object-cover">
+        <h4 class="text-2xl font-bold mb-2 text-yellow-400">Mediverify System</h4>
+        <p class="text-gray-200">A healthcare system for medical document verification, built with modern web technologies for secure record validation.</p>
       </div>
-    </div>
-  </section>
 
-  <!-- Skills -->
-  <section id="skills" class="py-20 px-4 bg-teal-800">
-    <div class="container mx-auto text-center">
-      <h2 class="text-5xl font-bold mb-16 text-yellow-400">My Skills</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-4xl mx-auto">
-        <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl">HTML5</div>
-        <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl">CSS3</div>
-        <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl">JavaScript</div>
-        <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl">React</div>
-        <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl">Git & GitHub</div>
-        <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl">Node.js</div>
-        <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl">Python</div>
-        <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl">SQL</div>
-        <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl">React Native</div>
-        <div class="bg-teal-900 p-6 rounded-xl shadow-lg text-xl">Tailwind CSS</div>
+      <!-- Project 2 -->
+      <div class="bg-teal-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition transform">
+        <img src="butchee_dashboard.JPG" alt="Butchee Admin Dashboard" class="rounded-xl mb-4 w-full h-48 object-cover">
+        <h4 class="text-2xl font-bold mb-2 text-yellow-400">Butchee Admin Dashboard</h4>
+        <p class="text-gray-200">A real-time butchery management system using React, Tailwind, and Supabase with features like stock, sales, and reports.</p>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-teal-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition transform">
+        <img src="mbogafresh_store.JPG" alt="MbogaFresh Store" class="rounded-xl mb-4 w-full h-48 object-cover">
+        <h4 class="text-2xl font-bold mb-2 text-yellow-400">MbogaFresh Online Store</h4>
+        <p class="text-gray-200">An e-commerce platform that connects farmers and consumers, built with Flutter and Firebase for mobile-first access.</p>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 px-4 bg-teal-900">
-    <div class="container mx-auto text-center">
-      <h2 class="text-5xl font-bold mb-16 text-yellow-400">Contact Me</h2>
-      <p class="text-xl mb-10 text-gray-200">Let's connect and build something amazing together!</p>
-      <div class="flex justify-center space-x-10 text-4xl">
-        <a href="mailto:ruthnjuguna@example.com" class="hover:text-yellow-400"><i class="fas fa-envelope"></i></a>
-        <a href="https://linkedin.com/in/ruth-njuguna" target="_blank" class="hover:text-yellow-400"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Ruthneemu" target="_blank" class="hover:text-yellow-400"><i class="fab fa-github"></i></a>
-      </div>
-    </div>
+  <section id="contact" class="py-20 px-6 md:px-20" data-aos="fade-up">
+    <h3 class="text-4xl font-bold mb-10 text-center text-yellow-400">Contact Me</h3>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="max-w-xl mx-auto bg-teal-900 p-8 rounded-2xl shadow-xl space-y-6">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-4 rounded-lg bg-teal-800 border border-teal-700 focus:ring-2 focus:ring-yellow-400 text-white placeholder-gray-400">
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-4 rounded-lg bg-teal-800 border border-teal-700 focus:ring-2 focus:ring-yellow-400 text-white placeholder-gray-400">
+      <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-4 rounded-lg bg-teal-800 border border-teal-700 focus:ring-2 focus:ring-yellow-400 text-white placeholder-gray-400"></textarea>
+      <button type="submit" class="w-full bg-yellow-400 text-teal-900 py-3 rounded-full font-semibold text-lg hover:bg-yellow-500 transition">Send Message</button>
+    </form>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-teal-900 py-8 text-center text-gray-400 text-sm">
-    <p>&copy; 2025 Ruth Njuguna. All rights reserved.</p>
-    <p>Designed with <span class="text-red-500">&hearts;</span> and Tailwind CSS.</p>
+  <footer class="py-8 bg-teal-950 text-center">
+    <div class="flex justify-center space-x-8 mb-4">
+      <a href="https://github.com/Ruthneemu" target="_blank" class="text-yellow-400 text-2xl hover:text-yellow-500"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/ruth-njuguna" target="_blank" class="text-yellow-400 text-2xl hover:text-yellow-500"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:ruth@example.com" class="text-yellow-400 text-2xl hover:text-yellow-500"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p class="text-gray-400 text-sm">© 2025 Ruth Njuguna. All rights reserved.</p>
   </footer>
 
+  <!-- Initialize AOS -->
+  <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
